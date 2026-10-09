@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome 2025 Batch | Faculty of Technological Studies - University of Vavuniya</title>
+  
+  <!-- Sci-Fi Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-dark: #050811;
+      --neon-blue: #00f0ff;
+      --neon-purple: #9d00ff;
+      --neon-gold: #ffb700;
+      --cyber-red: #ff2a5f;
+      --card-bg: rgba(10, 16, 30, 0.9);
+      --border-glow: rgba(0, 240, 255, 0.4);
+      --font-orbitron: 'Orbitron', sans-serif;
+      --font-rajdhani: 'Rajdhani', sans-serif;
+      --font-mono: 'Share Tech Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: #e0e6ed;
+      font-family: var(--font-rajdhani);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    /* Subtle Cyber Scanline Overlay */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+      background-size: 100% 4px;
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.7;
+    }
+
+    /* ==================== INTRO LOADER ==================== */
+    #intro-loader {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: #02040a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 10000;
+      transition: opacity 0.6s ease, visibility 0.6s ease;
+    }
+
+    .loader-content {
+      text-align: center;
+      padding: 20px;
+      max-width: 650px;
+      width: 90%;
+    }
+
+    /* Dual Logo Container */
+    .logos-intro-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 35px;
+      margin-bottom: 35px;
+      perspective: 1000px;
+    }
+
+    .intro-logo-box {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid var(--neon-blue);
+      background: rgba(0, 240, 255, 0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 30px rgba(0, 240, 255, 0.4);
+      animation: campusPulse 2.5s infinite alternate ease-in-out;
+      overflow: hidden;
+      padding: 12px;
+    }
+
+    .intro-logo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 0 10px var(--neon-blue));
+    }
+
+    .intro-logo-box.transformer {
+      border-color: var(--neon-gold);
+      box-shadow: 0 0 30px rgba(255, 183, 0, 0.4);
+      animation: robotFloat 3s infinite alternate ease-in-out;
+    }
+
+    .intro-logo-box.transformer img {
+      filter: drop-shadow(0 0 12px var(--neon-gold)) invert(1);
+    }
+
+    @keyframes campusPulse {
+      0% { transform: scale(0.95); box-shadow: 0 0 15px rgba(0, 240, 255, 0.3); }
+      100% { transform: scale(1.05); box-shadow: 0 0 35px rgba(0, 240, 255, 0.8); }
+    }
+
+    @keyframes robotFloat {
+      0% { transform: translateY(-5px) scale(0.98); box-shadow: 0 0 20px rgba(255, 183, 0, 0.3); }
+      100% { transform: translateY(5px) scale(1.04); box-shadow: 0 0 40px rgba(255, 183, 0, 0.8); }
+    }
+
+    .vs-text {
+      font-family: var(--font-orbitron);
+      font-size: 1.8rem;
+      color: var(--cyber-red);
+      text-shadow: 0 0 15px var(--cyber-red);
+      font-weight: 900;
+      animation: pulseVs 1.2s infinite alternate ease-in-out;
+    }
+
+    @keyframes pulseVs {
+      0% { opacity: 0.6; transform: scale(0.9); }
+      100% { opacity: 1; transform: scale(1.1); }
+    }
+
+    .loader-title {
+      font-family: var(--font-orbitron);
+      font-size: 1.9rem;
+      color: #fff;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      text-shadow: 0 0 15px var(--neon-blue);
+      margin-bottom: 10px;
+    }
+
+    .loader-sub {
+      font-family: var(--font-mono);
+      color: var(--neon-gold);
+      font-size: 1rem;
+      letter-spacing: 3px;
+      margin-bottom: 30px;
+    }
+
+    .progress-track {
+      width: 100%;
+      max-width: 380px;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+      overflow: hidden;
+      margin: 0 auto;
+      border: 1px solid rgba(0, 240, 255, 0.4);
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
+    }
+
+    .progress-fill {
+      width: 0%;
+      height: 100%;
+      background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple), var(--neon-gold));
+      box-shadow: 0 0 15px var(--neon-blue);
+      transition: width 0.1s linear;
+    }
+
+    .loader-status {
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      color: #8892b0;
+      margin-top: 15px;
+      letter-spacing: 1.5px;
+    }
+
+    #startBtn {
+      display: none;
+      margin-top: 25px;
+      padding: 14px 35px;
+      font-family: var(--font-orbitron);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--neon-blue);
+      background: rgba(0, 240, 255, 0.1);
+      border: 2px solid var(--neon-blue);
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transition: all 0.3s ease;
+      animation: pulseBtn 1.5s infinite alternate;
+    }
+
+    #startBtn:hover {
+      background: var(--neon-blue);
+      color: var(--bg-dark);
+      box-shadow: 0 0 35px var(--neon-blue);
+      transform: scale(1.05);
+    }
+
+    @keyframes pulseBtn {
+      0% { box-shadow: 0 0 15px rgba(0, 240, 255, 0.4); }
+      100% { box-shadow: 0 0 30px rgba(0, 240, 255, 0.9); }
+    }
+
+    /* ==================== INTENSE CYBER GLITCH WEBPAGE ENTER ANIMATION ==================== */
+    .screen-glitch-active {
+      animation: intenseCyberGlitch 1.8s cubic-bezier(0.11, 0, 0.5, 1) forwards;
+    }
+
+    @keyframes intenseCyberGlitch {
+      0% {
+        opacity: 0;
+        transform: scale(1.2) rotate(1deg);
+        filter: blur(15px) hue-rotate(180deg) contrast(3);
+        clip-path: inset(20% 0 50% 0);
+      }
+      10% {
+        opacity: 0.6;
+        transform: translateX(-30px) translateY(10px) scale(0.95);
+        filter: blur(5px) hue-rotate(-120deg) contrast(2.5);
+        clip-path: inset(60% 0 10% 0);
+      }
+      20% {
+        opacity: 0.9;
+        transform: translateX(25px) translateY(-15px) scale(1.05);
+        filter: blur(8px) hue-rotate(90deg) contrast(3);
+        clip-path: inset(5% 0 70% 0);
+      }
+      35% {
+        opacity: 0.4;
+        transform: translateX(-20px) scale(0.98);
+        filter: blur(2px) hue-rotate(-60deg) contrast(2);
+        clip-path: inset(40% 0 30% 0);
+      }
+      50% {
+        opacity: 1;
+        transform: translateX(15px) scale(1.02);
+        filter: blur(4px) hue-rotate(240deg) contrast(2.8);
+        clip-path: inset(15% 0 45% 0);
+      }
+      70% {
+        opacity: 0.85;
+        transform: translateX(-8px) scale(0.99);
+        filter: blur(1px) hue-rotate(30deg) contrast(1.5);
+        clip-path: inset(80% 0 2% 0);
+      }
+      85% {
+        opacity: 1;
+        transform: translateX(4px);
+        filter: blur(0.5px) contrast(1.2);
+        clip-path: inset(0 0 0 0);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0) scale(1) rotate(0deg);
+        filter: blur(0px) contrast(1) hue-rotate(0deg);
+        clip-path: inset(0 0 0 0);
+      }
+    }
+
+    /* Header & Navigation */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: rgba(5, 8, 17, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--neon-blue);
+      box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
+      z-index: 100;
+      padding: 12px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo {
+      font-family: var(--font-orbitron);
+      color: var(--neon-blue);
+      font-size: 1.1rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-shadow: 0 0 8px var(--neon-blue);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-logo img {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
+    }
+
+    .audio-controls {
+      display: flex;
+      gap: 10px;
+    }
+
+    .audio-btn {
+      background: transparent;
+      border: 1px solid var(--neon-blue);
+      color: var(--neon-blue);
+      padding: 6px 15px;
+      font-family: var(--font-mono);
+      cursor: pointer;
+      border-radius: 4px;
+      transition: all 0.3s;
+    }
+
+    .audio-btn:hover {
+      background: var(--neon-blue);
+      color: var(--bg-dark);
+      box-shadow: 0 0 12px var(--neon-blue);
+    }
+
+    /* HERO SECTION */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 100px 20px 40px;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: url('faculty-bg.jpg') center/cover no-repeat;
+      filter: brightness(0.3) contrast(1.2);
+      z-index: -2;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(circle, rgba(0, 240, 255, 0.08) 0%, rgba(5, 8, 17, 0.92) 80%);
+      z-index: -1;
+    }
+
+    .batch-badge {
+      display: inline-block;
+      background: rgba(255, 183, 0, 0.15);
+      border: 1px solid var(--neon-gold);
+      color: var(--neon-gold);
+      font-family: var(--font-mono);
+      padding: 6px 20px;
+      font-size: 0.95rem;
+      letter-spacing: 3px;
+      border-radius: 4px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 12px rgba(255, 183, 0, 0.3);
+    }
+
+    .main-title {
+      font-family: var(--font-orbitron);
+      font-size: 2.8rem;
+      font-weight: 900;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      text-shadow: 0 0 15px var(--neon-blue), 0 0 30px var(--neon-blue);
+      margin-bottom: 10px;
+    }
+
+    .sub-title {
+      font-family: var(--font-orbitron);
+      font-size: 1.6rem;
+      color: var(--neon-gold);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-shadow: 0 0 10px rgba(255, 183, 0, 0.5);
+      margin-bottom: 20px;
+    }
+
+    .hero-desc {
+      max-width: 750px;
+      color: #cbd5e1;
+      font-size: 1.15rem;
+      margin-bottom: 30px;
+      background: rgba(5, 8, 17, 0.6);
+      padding: 12px 20px;
+      border-left: 3px solid var(--neon-blue);
+      border-right: 3px solid var(--neon-blue);
+      backdrop-filter: blur(5px);
+    }
+
+    /* Container */
+    .container {
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+    }
+
+    .section-title {
+      font-family: var(--font-orbitron);
+      font-size: 2rem;
+      text-align: center;
+      color: var(--neon-blue);
+      text-transform: uppercase;
+      margin: 60px 0 30px;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px var(--neon-blue);
+    }
+
+    /* Degree Section */
+    .degree-box {
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(5, 8, 17, 0.9));
+      border: 2px solid var(--neon-purple);
+      border-radius: 12px;
+      padding: 35px;
+      box-shadow: 0 0 25px rgba(157, 0, 255, 0.25);
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .degree-title {
+      font-family: var(--font-orbitron);
+      font-size: 1.8rem;
+      color: #fff;
+      margin-bottom: 15px;
+    }
+
+    .degree-badge {
+      display: inline-block;
+      background: var(--neon-purple);
+      color: #fff;
+      padding: 5px 15px;
+      font-family: var(--font-mono);
+      border-radius: 20px;
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px var(--neon-purple);
+    }
+
+    .specialties-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    .spec-item {
+      background: rgba(0, 240, 255, 0.05);
+      border: 1px solid var(--neon-blue);
+      padding: 12px;
+      border-radius: 6px;
+      font-family: var(--font-mono);
+      font-size: 0.95rem;
+      color: var(--neon-blue);
+      text-transform: uppercase;
+      transition: all 0.3s;
+    }
+
+    .spec-item:hover {
+      background: var(--neon-blue);
+      color: var(--bg-dark);
+      font-weight: bold;
+      box-shadow: 0 0 15px var(--neon-blue);
+    }
+
+    /* Facilities */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+    }
+
+    .facility-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-glow);
+      border-radius: 10px;
+      padding: 25px;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s;
+    }
+
+    .facility-card:hover {
+      border-color: var(--neon-gold);
+      box-shadow: 0 0 20px rgba(255, 183, 0, 0.2);
+    }
+
+    .facility-card h3 {
+      font-family: var(--font-orbitron);
+      color: var(--neon-gold);
+      margin-bottom: 12px;
+      font-size: 1.3rem;
+    }
+
+    .facility-card p {
+      color: #cbd5e1;
+      font-size: 1.05rem;
+    }
+
+    /* Photo Gallery */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 22px;
+      margin-top: 20px;
+    }
+
+    .gallery-item {
+      position: relative;
+      background: var(--card-bg);
+      border: 1px solid var(--border-glow);
+      border-radius: 10px;
+      overflow: hidden;
+      height: 240px;
+      transition: all 0.3s ease;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease, filter 0.3s ease;
+      filter: brightness(0.85);
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.08);
+      filter: brightness(1.1);
+    }
+
+    .gallery-item:hover {
+      border-color: var(--neon-blue);
+      box-shadow: 0 0 25px rgba(0, 240, 255, 0.35);
+    }
+
+    .gallery-caption {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      background: linear-gradient(transparent, rgba(5, 8, 17, 0.98));
+      padding: 15px;
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      color: var(--neon-blue);
+      text-align: center;
+      letter-spacing: 1px;
+    }
+
+    /* Stats */
+    .stats-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    .stat-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-glow);
+      padding: 25px 35px;
+      border-radius: 8px;
+      min-width: 240px;
+      text-align: center;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+      transition: transform 0.3s, border-color 0.3s;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--neon-gold);
+    }
+
+    .stat-number {
+      font-family: var(--font-orbitron);
+      font-size: 2.8rem;
+      font-weight: 900;
+      color: var(--neon-blue);
+      text-shadow: 0 0 10px var(--neon-blue);
+    }
+
+    .stat-label {
+      font-family: var(--font-mono);
+      font-size: 1rem;
+      color: #a0aec0;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Terminal */
+    .terminal {
+      background: #02040a;
+      border: 1px solid var(--neon-blue);
+      border-radius: 8px;
+      padding: 20px;
+      font-family: var(--font-mono);
+      color: #00ff66;
+      box-shadow: inset 0 0 15px rgba(0, 255, 102, 0.1);
+      margin-top: 50px;
+    }
+
+    .terminal-header {
+      color: var(--neon-blue);
+      border-bottom: 1px dashed var(--neon-blue);
+      padding-bottom: 8px;
+      margin-bottom: 15px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      border-top: 1px solid rgba(0, 240, 255, 0.2);
+      font-family: var(--font-mono);
+      color: #64748b;
+      background: #020409;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 768px) {
+      .main-title { font-size: 1.8rem; }
+      .sub-title { font-size: 1.1rem; }
+      .stat-card { min-width: 100%; }
+      .logos-intro-wrapper { gap: 15px; }
+      .intro-logo-box { width: 90px; height: 90px; }
+    }
+
+
+    /* ===== V2 CINEMATIC VISUAL UPGRADE ===== */
+    body {
+      background:
+        radial-gradient(ellipse at 15% 15%, rgba(0, 240, 255, .12), transparent 38%),
+        radial-gradient(ellipse at 85% 40%, rgba(255, 42, 95, .10), transparent 35%),
+        #03050b;
+    }
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: -1;
+      opacity: .22;
+      background-image: linear-gradient(rgba(0,240,255,.11) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(0,240,255,.11) 1px, transparent 1px);
+      background-size: 54px 54px;
+      mask-image: linear-gradient(to bottom, black, transparent 88%);
+    }
+    header {
+      background: rgba(2, 5, 13, .90) !important;
+      border-bottom: 1px solid rgba(0,240,255,.55) !important;
+      box-shadow: 0 8px 35px rgba(0,240,255,.12), 0 1px 0 rgba(255,42,95,.22);
+      backdrop-filter: blur(18px);
+    }
+    .nav-logo { text-shadow: 0 0 14px rgba(0,240,255,.8); }
+    .hero { isolation: isolate; min-height: 92vh; }
+    .hero-bg {
+      filter: brightness(.22) contrast(1.3) saturate(1.3) !important;
+      transform: scale(1.04);
+      animation: heroDrift 24s ease-in-out infinite alternate;
+    }
+    .hero-overlay {
+      background:
+        linear-gradient(180deg, rgba(2,5,13,.22), rgba(2,5,13,.72)),
+        radial-gradient(ellipse at center, rgba(0,240,255,.20), transparent 58%),
+        linear-gradient(115deg, rgba(0,240,255,.08), transparent 40%, rgba(255,42,95,.10)) !important;
+    }
+    .batch-badge {
+      border-radius: 999px !important;
+      padding: 9px 24px !important;
+      letter-spacing: 4px !important;
+      background: rgba(255,183,0,.10) !important;
+      box-shadow: 0 0 24px rgba(255,183,0,.22), inset 0 0 15px rgba(255,183,0,.08) !important;
+      animation: badgePulse 3s ease-in-out infinite;
+    }
+    .main-title {
+      max-width: 1100px;
+      background: linear-gradient(90deg, #ffffff 8%, #8df8ff 42%, #ffffff 60%, #ffca61 92%);
+      background-size: 220% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent !important;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 32px rgba(0,240,255,.18) !important;
+      animation: titleShine 7s linear infinite, titleEnter 1.1s cubic-bezier(.2,.8,.2,1) both;
+    }
+    .sub-title {
+      text-shadow: 0 0 12px rgba(255,183,0,.65), 0 0 34px rgba(255,183,0,.18) !important;
+      animation: titleEnter 1.25s .12s both;
+    }
+    .hero-desc {
+      border: 1px solid rgba(0,240,255,.45) !important;
+      border-left: 3px solid var(--neon-blue) !important;
+      border-right: 3px solid var(--cyber-red) !important;
+      border-radius: 8px;
+      box-shadow: 0 14px 45px rgba(0,0,0,.28), inset 0 0 25px rgba(0,240,255,.04);
+      animation: titleEnter 1.35s .2s both;
+    }
+    .audio-btn {
+      border-radius: 999px !important;
+      padding: 8px 16px !important;
+      background: rgba(0,240,255,.055) !important;
+      box-shadow: inset 0 0 12px rgba(0,240,255,.035);
+    }
+    .audio-btn:focus-visible, #startBtn:focus-visible {
+      outline: 3px solid #fff;
+      outline-offset: 4px;
+    }
+    #startBtn {
+      border-radius: 999px !important;
+      padding: 16px 30px !important;
+      background: linear-gradient(110deg, rgba(0,240,255,.16), rgba(157,0,255,.18), rgba(255,42,95,.14)) !important;
+      box-shadow: 0 0 22px rgba(0,240,255,.2), inset 0 0 18px rgba(0,240,255,.08) !important;
+      transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+    }
+    #startBtn:hover {
+      transform: translateY(-3px) scale(1.025);
+      box-shadow: 0 0 35px rgba(0,240,255,.45), 0 0 65px rgba(157,0,255,.18) !important;
+    }
+    .degree-box, .facility-card, .stat-card, .gallery-item, .terminal {
+      border: 1px solid rgba(0,240,255,.24) !important;
+      box-shadow: 0 12px 35px rgba(0,0,0,.25), inset 0 0 25px rgba(0,240,255,.025);
+      transition: transform .28s ease, border-color .28s ease, box-shadow .28s ease;
+    }
+    .facility-card:hover, .stat-card:hover, .gallery-item:hover, .degree-box:hover {
+      transform: translateY(-5px);
+      border-color: rgba(0,240,255,.72) !important;
+      box-shadow: 0 18px 42px rgba(0,240,255,.11), 0 0 22px rgba(0,240,255,.07);
+    }
+    .section-title { position: relative; }
+    .section-title::after {
+      content: "";
+      display: block;
+      width: 92px;
+      height: 3px;
+      margin: 13px auto 0;
+      border-radius: 4px;
+      background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple), var(--cyber-red));
+      box-shadow: 0 0 14px rgba(0,240,255,.45);
+    }
+    footer {
+      border-top: 1px solid rgba(0,240,255,.25);
+      background: linear-gradient(180deg, rgba(3,5,11,.4), rgba(1,2,6,.95));
+    }
+    @keyframes titleShine { to { background-position: 220% center; } }
+    @keyframes titleEnter { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes badgePulse { 0%,100% { box-shadow: 0 0 14px rgba(255,183,0,.14); } 50% { box-shadow: 0 0 28px rgba(255,183,0,.32); } }
+    @keyframes heroDrift { from { transform: scale(1.04) translateX(-.5%); } to { transform: scale(1.10) translateX(.5%); } }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
+    }
+    @media (max-width: 600px) {
+      header { gap: 12px; flex-wrap: wrap; }
+      .audio-controls { flex-wrap: wrap; justify-content: center; }
+      .main-title { letter-spacing: 1px !important; line-height: 1.25; }
+      .batch-badge { letter-spacing: 2px !important; font-size: .8rem !important; }
+    }
+
+  </style>
+</head>
+<body id="mainBody">
+
+  <!-- ==================== INTRO LOADER ==================== -->
+  <div id="intro-loader">
+    <div class="loader-content">
+      
+      <div class="logos-intro-wrapper">
+        <div class="intro-logo-box">
+          <img src="University-of-Vavuniya-Logo-1024x1024.png" alt="University of Vavuniya Logo" onerror="this.src='https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=150&q=80'">
+        </div>
+        <div class="vs-text"></div>
+        <div class="intro-logo-box transformer">
+          <img src="transformers-logo-png_seeklogo-434725.png"alt="Transformer Logo" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=150&q=80'">
+        </div>
+      </div>
+
+      <h2 class="loader-title">AUTOBOTS x VAVUNIYA TECH</h2>
+      <div class="loader-sub">ESTABLISHING CYBERNETIC LINK...</div>
+      
+      <div class="progress-track">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <div class="loader-status" id="loaderStatus">SYSTEM INITIALIZATION: 0%</div>
+
+      <button id="startBtn"> ENTER FACULTY OF TECHNOLOGICAL STUDIES </button>
+    </div>
+  </div>
+
+  <!-- HEADER NAVIGATION -->
+  <header>
+    <div class="nav-logo">
+      <img src="vavuniya-logo.png" alt="Logo" onerror="this.style.display='none'">
+      AUTOBOTS HQ // FTS
+    </div>
+    <div class="audio-controls">
+      <button class="audio-btn" id="musicToggle">BGM: OFF</button>
+      <button class="audio-btn" id="soundToggle">SFX: ON</button>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="batch-badge"> WELCOME 2025 BATCH </div>
+
+    <h1 class="main-title">Welcome to University of Vavuniya</h1>
+    <h2 class="sub-title">Faculty Of Technological Studies</h2>
+    
+    <p class="hero-desc">
+      Empowering the new generation of tech innovators, engineers, and digital leaders. Roll out into your academic journey!
+    </p>
+  </section>
+
+  <!-- MAIN CONTAINER -->
+  <div class="container">
+    
+    <!-- DEGREE SECTION -->
+    <h2 class="section-title">Academic Program</h2>
+    <div class="degree-box">
+      <h3 class="degree-title">Bachelor of Information and Communication Technology (BICT Hons)</h3>
+      <span class="degree-badge">Primary Degree Offering</span>
+      <p style="color: #a0aec0; max-width: 800px; margin: 0 auto;">
+        A comprehensive degree crafted to build top-tier professionals equipped with cutting-edge theoretical foundations and practical expertise.
+      </p>
+      
+      <div class="specialties-grid">
+        <div class="spec-item">Cyber Security</div>
+        <div class="spec-item">Machine Learning</div>
+        <div class="spec-item">Intelligent Systems</div>
+        <div class="spec-item">Cloud Computing</div>
+        <div class="spec-item">Data Mining</div>
+        <div class="spec-item">Networking</div>
+      </div>
+    </div>
+
+    <!-- FACILITY HIGHLIGHTS -->
+    <h2 class="section-title">Faculty Facilities</h2>
+    <div class="grid-2">
+      <div class="facility-card">
+        <h3>💻 2 Smart Twin Computer Labs</h3>
+        <p>Equipped with high-performance systems and Smart Twin Classroom facilities designed for interactive modern technical learning.</p>
+      </div>
+
+      <div class="facility-card">
+        <h3>⚡ Advanced IT Center</h3>
+        <p>Dedicated high-level hub optimized for advanced programming, heavy software development, and specialized coding sprints.</p>
+      </div>
+
+      <div class="facility-card">
+        <h3>📚 e-Library & VLE Platform</h3>
+        <p>Seamless access to digital library resources and the Virtual Learning Environment (VLE) for uploading and managing academic work.</p>
+      </div>
+
+      <div class="facility-card">
+        <h3>🚀 Startup & Entrepreneurship</h3>
+        <p>"Mastering the Startup Journey" - Specialized training modules to transform tech student ideas into real-world business paths.</p>
+      </div>
+
+      <div class="facility-card" style="grid-column: 1 / -1;">
+        <h3>🔬 Advanced Research Hub</h3>
+        <p>Extensive opportunities for practical projects, research publications, and innovations in diverse computing technologies.</p>
+      </div>
+    </div>
+
+    <!-- PHOTO GALLERY -->
+    <h2 class="section-title">Project & Campus Photo Gallery</h2>
+    <p style="text-align: center; color: #a0aec0; margin-bottom: 30px;">Behind the scenes: Thorana construction, Robot building process, and memorable campus moments.</p>
+    
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="thorana1.jpg" alt="Thorana" onerror="this.src='https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80'">
+        <div class="gallery-caption">[01] Thorana Framework Setup</div>
+      </div>
+      <div class="gallery-item">
+        <img src="thorana2.jpg" alt="Lighting" onerror="this.src='https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80'">
+        <div class="gallery-caption">[02] Transformer Theme Lighting</div>
+      </div>
+      <div class="gallery-item">
+        <img src="robot1.jpg" alt="Robot" onerror="this.src='https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600&q=80'">
+        <div class="gallery-caption">[03] Robot Body Assembly</div>
+      </div>
+      <div class="gallery-item">
+        <img src="robot2.jpg" alt="Testing" onerror="this.src='https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'">
+        <div class="gallery-caption">[04] Microcontroller & Sensor Testing</div>
+      </div>
+      <div class="gallery-item">
+        <img src="campus1.jpg" alt="Campus" onerror="this.src='https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=600&q=80'">
+        <div class="gallery-caption">[05] University Premises View</div>
+      </div>
+      <div class="gallery-item">
+        <img src="campus2.jpg" alt="Lab" onerror="this.src='https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80'">
+        <div class="gallery-caption">[06] Smart Computer Lab Session</div>
+      </div>
+      <div class="gallery-item">
+        <img src="campus3.jpg" alt="Team" onerror="this.src='https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80'">
+        <div class="gallery-caption">[07] Team Brainstorming & Coding</div>
+      </div>
+      <div class="gallery-item">
+        <img src="campus4.jpg" alt="Grounds" onerror="this.src='https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&w=600&q=80'">
+        <div class="gallery-caption">[08] Faculty Grounds & Surroundings</div>
+      </div>
+      <div class="gallery-item">
+        <img src="campus5.jpg" alt="Library" onerror="this.src='https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=600&q=80'">
+        <div class="gallery-caption">[09] e-Library & Study Hub</div>
+      </div>
+      <div class="gallery-item">
+        <img src="team_final.jpg" alt="Final" onerror="this.src='https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80'">
+        <div class="gallery-caption">[10] Organizing Team 2025/2026</div>
+      </div>
+    </div>
+
+    <!-- STATS -->
+    <h2 class="section-title">Faculty Statistics & Staff</h2>
+    <div class="stats-container">
+      <div class="stat-card">
+        <div class="stat-number">30</div>
+        <div class="stat-label">Academic Staff</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">662</div>
+        <div class="stat-label">Undergraduates</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">184</div>
+        <div class="stat-label">Passout Students</div>
+      </div>
+    </div>
+
+    <!-- TERMINAL -->
+    <div class="terminal">
+      <div class="terminal-header">
+        <span>SYSTEM LOG // 2025 BATCH RECEPTION</span>
+        <span>STATUS: ACTIVE</span>
+      </div>
+      <p>> Initializing Welcome Protocol for 2025 Batch...</p>
+      <p>> Target: Faculty of Technological Studies, University of Vavuniya</p>
+      <p>> Media Gallery: 10/10 Photos Loaded</p>
+      <p>> Optimus Prime Voice Protocol Engaged. Welcome Juniors! Roll Out!</p>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>© 2026 Faculty of Technological Studies | University of Vavuniya</p>
+    <p style="font-size: 0.8rem; margin-top: 5px; color: var(--neon-blue);">Engineered for 2025 Freshers Welcome Event</p>
+  </footer>
+
+  <!-- CINEMATIC TRANSFORMER-INSPIRED AUDIO ENGINE -->
+  <script>
+    let audioCtx = null;
+    let masterGain = null;
+    let musicBus = null;
+    let musicPlaying = false;
+    let musicInterval = null;
+    let padOscillators = [];
+    let soundEnabled = true;
+    let welcomeHasPlayed = false;
+
+    function initAudioContext() {
+      if (!audioCtx) {
+        const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+        if (!AudioContextClass) return false;
+        audioCtx = new AudioContextClass();
+        masterGain = audioCtx.createGain();
+        masterGain.gain.value = 0.96;
+        masterGain.connect(audioCtx.destination);
+        musicBus = audioCtx.createGain();
+        musicBus.gain.value = 0.0;
+        musicBus.connect(masterGain);
+      }
+      if (audioCtx.state === 'suspended') audioCtx.resume();
+      return true;
+    }
+
+    function makeTone({ frequency, type = 'sine', duration = 1, volume = 0.04,
+                        filterType = 'lowpass', filterFrequency = 900, detune = 0 }) {
+      if (!initAudioContext()) return;
+      const now = audioCtx.currentTime;
+      const osc = audioCtx.createOscillator();
+      const filter = audioCtx.createBiquadFilter();
+      const gain = audioCtx.createGain();
+      osc.type = type;
+      osc.frequency.setValueAtTime(frequency, now);
+      osc.detune.setValueAtTime(detune, now);
+      filter.type = filterType;
+      filter.frequency.setValueAtTime(filterFrequency, now);
+      filter.Q.value = 0.7;
+      gain.gain.setValueAtTime(0.0001, now);
+      gain.gain.exponentialRampToValueAtTime(Math.max(volume, 0.0002), now + 0.04);
+      gain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
+      osc.connect(filter);
+      filter.connect(gain);
+      gain.connect(masterGain);
+      osc.start(now);
+      osc.stop(now + duration + 0.03);
+    }
+
+    // Original, browser-generated cinematic synth music (not copied from a movie soundtrack).
+    function startTransformerBGM() {
+      if (musicPlaying || !initAudioContext()) return;
+      musicPlaying = true;
+      const button = document.getElementById('musicToggle');
+      if (button) button.innerText = 'BGM: PLAYING';
+      const now = audioCtx.currentTime;
+      musicBus.gain.cancelScheduledValues(now);
+      musicBus.gain.setValueAtTime(musicBus.gain.value, now);
+      musicBus.gain.linearRampToValueAtTime(1.12, now + 1.8); // Slightly louder background music
+
+      // Low, sustained cinematic drone with a gentle beating effect.
+      [55, 82.41, 110].forEach((freq, index) => {
+        const osc = audioCtx.createOscillator();
+        const filter = audioCtx.createBiquadFilter();
+        const gain = audioCtx.createGain();
+        osc.type = index === 1 ? 'triangle' : 'sawtooth';
+        osc.frequency.value = freq;
+        osc.detune.value = index === 2 ? 7 : -4;
+        filter.type = 'lowpass';
+        filter.frequency.value = index === 0 ? 150 : 360;
+        gain.gain.value = index === 0 ? 0.18 : 0.066; // Boost the low cinematic drone by about 25%
+        osc.connect(filter);
+        filter.connect(gain);
+        gain.connect(musicBus);
+        osc.start();
+        padOscillators.push(osc);
+      });
+
+      const bassSequence = [55, 55, 65.41, 73.42, 82.41, 73.42, 65.41, 49];
+      const leadSequence = [220, 246.94, 261.63, 293.66, 329.63, 293.66, 261.63, 246.94];
+      const chordSequence = [110, 130.81, 146.83, 98];
+      let step = 0;
+      musicInterval = setInterval(() => {
+        if (!musicPlaying || !audioCtx) return;
+        const t = audioCtx.currentTime;
+        const bass = audioCtx.createOscillator();
+        const bassFilter = audioCtx.createBiquadFilter();
+        const bassGain = audioCtx.createGain();
+        bass.type = 'triangle';
+        bass.frequency.setValueAtTime(bassSequence[step % bassSequence.length], t);
+        bassFilter.type = 'lowpass';
+        bassFilter.frequency.setValueAtTime(210, t);
+        bassGain.gain.setValueAtTime(0.0001, t);
+        bassGain.gain.linearRampToValueAtTime(0.125, t + 0.025); // Stronger bass for a fuller soundtrack
+        bassGain.gain.exponentialRampToValueAtTime(0.0001, t + 0.78);
+        bass.connect(bassFilter); bassFilter.connect(bassGain); bassGain.connect(musicBus);
+        bass.start(t); bass.stop(t + 0.82);
+
+        // Bright, restrained sci-fi notes; every second step leaves room for the voice.
+        if (step % 2 === 0) {
+          const lead = audioCtx.createOscillator();
+          const leadFilter = audioCtx.createBiquadFilter();
+          const leadGain = audioCtx.createGain();
+          lead.type = 'triangle';
+          lead.frequency.setValueAtTime(leadSequence[step % leadSequence.length], t);
+          leadFilter.type = 'lowpass';
+          leadFilter.frequency.setValueAtTime(1250, t);
+          leadGain.gain.setValueAtTime(0.0001, t);
+          leadGain.gain.linearRampToValueAtTime(0.044, t + 0.05); // Slightly stronger sci-fi melody
+          leadGain.gain.exponentialRampToValueAtTime(0.0001, t + 0.55);
+          lead.connect(leadFilter); leadFilter.connect(leadGain); leadGain.connect(musicBus);
+          lead.start(t); lead.stop(t + 0.6);
+        }
+        if (step % 8 === 0) {
+          makeMusicChord(chordSequence[Math.floor(step / 8) % chordSequence.length]);
+        }
+        step++;
+      }, 420);
+    }
+
+    function makeMusicChord(rootFrequency) {
+      if (!audioCtx || !musicBus || !musicPlaying) return;
+      const now = audioCtx.currentTime;
+      [1, 1.25, 1.5].forEach((ratio, i) => {
+        const osc = audioCtx.createOscillator();
+        const filter = audioCtx.createBiquadFilter();
+        const gain = audioCtx.createGain();
+        osc.type = 'sine';
+        osc.frequency.value = rootFrequency * ratio;
+        filter.type = 'lowpass';
+        filter.frequency.value = 650;
+        gain.gain.setValueAtTime(0.0001, now);
+        gain.gain.linearRampToValueAtTime(i === 0 ? 0.023 : 0.012, now + 0.25); // Slightly fuller chord layer
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + 1.9);
+        osc.connect(filter); filter.connect(gain); gain.connect(musicBus);
+        osc.start(now); osc.stop(now + 2);
+      });
+    }
+
+    function stopTransformerBGM() {
+      if (!audioCtx || !musicPlaying) return;
+      musicPlaying = false;
+      clearInterval(musicInterval);
+      musicInterval = null;
+      const now = audioCtx.currentTime;
+      musicBus.gain.cancelScheduledValues(now);
+      musicBus.gain.setTargetAtTime(0.0001, now, 0.25);
+      padOscillators.forEach(osc => {
+        try { osc.stop(now + 0.9); } catch (e) {}
+      });
+      padOscillators = [];
+      const button = document.getElementById('musicToggle');
+      if (button) button.innerText = 'BGM: OFF';
+    }
+
+    // Short synthetic mechanical effects, created with Web Audio (no external audio files required).
+    function playTransformerSound(type) {
+      if (!soundEnabled || !initAudioContext()) return;
+      if (type === 'transform') {
+        const now = audioCtx.currentTime;
+        [95, 142, 190].forEach((freq, i) => {
+          const osc = audioCtx.createOscillator();
+          const filter = audioCtx.createBiquadFilter();
+          const gain = audioCtx.createGain();
+          osc.type = i === 1 ? 'square' : 'sawtooth';
+          osc.frequency.setValueAtTime(freq, now);
+          osc.frequency.exponentialRampToValueAtTime(freq * 3.8, now + 0.32);
+          osc.frequency.exponentialRampToValueAtTime(freq * 0.72, now + 1.05);
+          filter.type = 'lowpass';
+          filter.frequency.setValueAtTime(420 + i * 180, now);
+          filter.frequency.exponentialRampToValueAtTime(180, now + 1.05);
+          gain.gain.setValueAtTime(0.0001, now);
+          gain.gain.linearRampToValueAtTime(i === 0 ? 0.065 : 0.025, now + 0.08);
+          gain.gain.exponentialRampToValueAtTime(0.0001, now + 1.08);
+          osc.connect(filter); filter.connect(gain); gain.connect(masterGain);
+          osc.start(now); osc.stop(now + 1.12);
+        });
+        // Low cinematic impact.
+        makeTone({ frequency: 48, type: 'sine', duration: 0.7, volume: 0.12, filterFrequency: 100 });
+      } else if (type === 'click') {
+        makeTone({ frequency: 760, type: 'sine', duration: 0.075, volume: 0.025, filterFrequency: 1500 });
+      }
+    }
+
+    // Browser voices differ by device. This selects an English voice where available and
+    // uses a slow, low-pitched, deliberate delivery for an original robotic-leader feel.
+    // WELCOME VOICE: choose the deepest available English system voice and use
+    // a slow, low-pitched delivery for a cinematic robotic-leader feel.
+    // Browser speech synthesis cannot reproduce the exact Optimus Prime actor/voice;
+    // the available voices depend on the user's browser and installed system voices.
+    function speakWelcomeMessage() {
+      if (!('speechSynthesis' in window)) {
+        console.warn('Speech synthesis is not supported in this browser.');
+        return;
+      }
+
+      window.speechSynthesis.cancel();
+
+      // Short, deliberate lines leave room for the background music and sound effects.
+      const lines = [
+        {
+          text: 'Welcome... to the University of Vavuniya!',
+          rate: 0.78,
+          pitch: 0.12,
+          delay: 650
+        },
+        {
+          text: 'Faculty... of Technological Studies.',
+          rate: 0.76,
+          pitch: 0.10,
+          delay: 1000
+        },
+        {
+          text: 'Freshers of the twenty twenty-five batch... Autobots, roll out!',
+          rate: 0.74,
+          pitch: 0.12,
+          delay: 1200
+        }
+      ];
+
+      // Voice names vary by Windows, macOS, Android and browser. Try known masculine
+      // voices first, then other non-explicitly-feminine English voices, then any English voice.
+      function chooseDeepEnglishVoice(availableVoices) {
+        const englishVoices = availableVoices.filter(voice => /^en([_-]|$)/i.test(voice.lang));
+        const masculineName = /\b(david|mark|guy|george|daniel|james|richard|aaron|alex|ryan|eric|thomas|christopher|male|masculine)\b/i;
+        const feminineName = /\b(zira|jenny|aria|samantha|victoria|susan|hazel|heather|karen|female|feminine)\b/i;
+
+        return englishVoices.find(voice => masculineName.test(voice.name) && !feminineName.test(voice.name))
+          || englishVoices.find(voice => !feminineName.test(voice.name))
+          || englishVoices[0]
+          || null;
+      }
+
+      let lineIndex = 0;
+      let hasStarted = false;
+      let selectedVoice = null;
+
+      // A guard prevents a browser's delayed voiceschanged event from starting the welcome twice.
+      const speakNext = () => {
+        if (hasStarted && lineIndex === 0) return;
+        hasStarted = true;
+        if (lineIndex >= lines.length) return;
+
+        const line = lines[lineIndex++];
+        const utterance = new SpeechSynthesisUtterance(line.text);
+        if (selectedVoice) {
+          utterance.voice = selectedVoice;
+          utterance.lang = selectedVoice.lang || 'en-US';
+        } else {
+          utterance.lang = 'en-US';
+        }
+
+        // These values lower the delivery and slow the cadence; the actual tone still
+        // depends on which speech voice is installed on the computer/browser.
+        utterance.rate = line.rate;
+        utterance.pitch = line.pitch;
+        utterance.volume = 1.0;
+
+        utterance.onend = () => window.setTimeout(speakNext, line.delay);
+        utterance.onerror = (event) => {
+          console.warn('Welcome voice playback issue:', event.error || 'unknown error');
+        };
+        window.speechSynthesis.speak(utterance);
+      };
+
+      const voices = window.speechSynthesis.getVoices();
+      if (voices.length) {
+        selectedVoice = chooseDeepEnglishVoice(voices);
+        speakNext();
+      } else {
+        // Some browsers load their speech voices asynchronously.
+        const onVoicesChanged = () => {
+          const loadedVoices = window.speechSynthesis.getVoices();
+          if (!loadedVoices.length || hasStarted) return;
+          selectedVoice = chooseDeepEnglishVoice(loadedVoices);
+          window.speechSynthesis.removeEventListener?.('voiceschanged', onVoicesChanged);
+          speakNext();
+        };
+        window.speechSynthesis.addEventListener?.('voiceschanged', onVoicesChanged);
+
+        // Fall back after a short wait if this browser does not fire voiceschanged.
+        window.setTimeout(() => {
+          if (hasStarted) return;
+          selectedVoice = chooseDeepEnglishVoice(window.speechSynthesis.getVoices());
+          speakNext();
+        }, 700);
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const fill = document.getElementById('progressFill');
+      const status = document.getElementById('loaderStatus');
+      const loader = document.getElementById('intro-loader');
+      const startBtn = document.getElementById('startBtn');
+      const mainBody = document.getElementById('mainBody');
+      const musicToggle = document.getElementById('musicToggle');
+      const soundToggle = document.getElementById('soundToggle');
+
+      let progress = 0;
+      const interval = window.setInterval(() => {
+        progress += 1;
+        if (progress <= 100) {
+          fill.style.width = progress + '%';
+          if (progress < 30) status.innerText = 'SYSTEM INITIALIZATION: ' + progress + '% [ESTABLISHING UPLINK]';
+          else if (progress < 65) status.innerText = 'SYSTEM INITIALIZATION: ' + progress + '% [LOADING TECH FACULTY PROTOCOLS]';
+          else if (progress < 90) status.innerText = 'SYSTEM INITIALIZATION: ' + progress + '% [CALIBRATING ROBOTIC VOICE]';
+          else status.innerText = 'SYSTEM INITIALIZATION: 100% [READY]';
+        } else {
+          clearInterval(interval);
+          status.style.display = 'none';
+          startBtn.style.display = 'inline-block';
+        }
+      }, 45);
+
+      startBtn.addEventListener('click', () => {
+        playTransformerSound('transform');
+        startTransformerBGM();
+        if (!welcomeHasPlayed) {
+          speakWelcomeMessage();
+          welcomeHasPlayed = true;
+        }
+        loader.style.opacity = '0';
+        loader.style.visibility = 'hidden';
+        mainBody.classList.add('screen-glitch-active');
+      });
+
+      musicToggle.addEventListener('click', () => {
+        playTransformerSound('click');
+        if (musicPlaying) stopTransformerBGM();
+        else startTransformerBGM();
+      });
+
+      soundToggle.addEventListener('click', (event) => {
+        soundEnabled = !soundEnabled;
+        if (soundEnabled) playTransformerSound('click');
+        event.currentTarget.innerText = soundEnabled ? 'SFX: ON' : 'SFX: MUTED';
+      });
+    });
+  </script>
+</body>
+</html>
